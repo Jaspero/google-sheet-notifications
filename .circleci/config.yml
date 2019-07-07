@@ -13,6 +13,9 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "package-lock.json" }}-{{ checksum "functions/package-lock.json" }}
       - run:
+        name: Where
+        command: ls
+      - run:
           name: Install Shared dependencies
           command: yes | npm ci || true
       - run:
