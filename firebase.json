@@ -1,0 +1,20 @@
+{
+  "functions": {
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint",
+      "npm --prefix \"$RESOURCE_DIR\" run build"
+    ]
+  },
+  "hosting": {
+    "rewrites": [
+      {
+        "source": "/o-auth-callback",
+        "function": "oAuthCallback"
+      },
+      {
+        "source": "/auth-google-api",
+        "function": "authGoogleApi"
+      }
+    ]
+  }
+}

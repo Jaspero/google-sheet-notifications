@@ -1,0 +1,45 @@
+{
+  "name": "@jaspero/google-sheet-notifications",
+  "version": "1.0.0",
+  "description": "Send email notifications based on approaching dates in a google sheet using Cloud Functions and SendGrid",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npm --prefix functions run lint",
+    "build": "npm --prefix functions run build",
+    "deploy": "firebase deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaspero/google-sheet-notifications.git"
+  },
+  "keywords": [
+    "google",
+    "sheets",
+    "firebase",
+    "cloud",
+    "functions"
+  ],
+  "author": "Jaspero Ltd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jaspero/google-sheet-notifications/issues"
+  },
+  "homepage": "https://github.com/Jaspero/google-sheet-notifications#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-commit": "git update-index -g"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "husky": "3.0.0",
+    "lint-staged": "9.1.0",
+    "prettier": "1.18.2"
+  }
+}
