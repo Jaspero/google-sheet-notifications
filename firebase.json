@@ -1,14 +1,1 @@
-{
-  "hosting": {
-    "rewrites": [
-      {
-        "source": "/o-auth-callback",
-        "function": "oAuthCallback"
-      },
-      {
-        "source": "/auth-google-api",
-        "function": "authGoogleApi"
-      }
-    ]
-  }
-}
+{}

@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "npm --prefix functions run lint",
     "build": "npm --prefix functions run build",
-    "deploy": "firebase deploy --debug"
+    "deploy": "firebase deploy --only functions --debug"
   },
   "repository": {
     "type": "git",
