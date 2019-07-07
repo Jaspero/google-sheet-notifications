@@ -1,7 +1,6 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/project
     docker:
       - image: flauc/firebase
     environment:
@@ -48,7 +47,6 @@ jobs:
   deploy:
     docker:
       - image: flauc/firebase
-    working_directory: ~/project
     steps:
       - run:
           name: Show current branch
