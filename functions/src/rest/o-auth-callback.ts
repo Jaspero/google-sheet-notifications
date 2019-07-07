@@ -11,17 +11,19 @@ export const oAuthCallback = functions.https.onRequest(
 
     try {
       const {tokens} = await functionsOauthClient.getToken(code);
-      // Now tokens contains an access_token and an optional refresh_token. Save them.
       await admin
         .firestore()
         .collection('settings')
         .doc('tokens')
         .set(tokens);
 
+      console.log(2222);
+
       return res
         .status(constants.HTTP_STATUS_OK)
         .send('Authentication complete');
     } catch (error) {
+      console.error(error);
       return res.status(constants.HTTP_STATUS_UNAUTHORIZED).send(error);
     }
   }

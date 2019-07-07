@@ -1,4 +1,4 @@
-import * as functions from "firebase-functions";
+import * as functions from 'firebase-functions';
 
 export const ENV_CONFIG = functions.config() as {
   sendgrid: {

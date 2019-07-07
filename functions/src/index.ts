@@ -1,10 +1,14 @@
-import { initializeApp } from "firebase-admin";
+import * as admin from 'firebase-admin';
+import {initializeApp} from 'firebase-admin';
+import applicationDefault = admin.credential.applicationDefault;
 
-initializeApp();
+initializeApp({
+  credential: applicationDefault()
+});
 
 // Rest
-export { authGoogleApi } from "./rest/auth-google-api";
-export { oAuthCallback } from "./rest/o-auth-callback";
+export {authGoogleApi} from './rest/auth-google-api';
+export {oAuthCallback} from './rest/o-auth-callback';
 
 // Schedules
-export { sendNotifications } from "./schedules/send-notifications";
+export {sendNotifications} from './schedules/send-notifications';

@@ -1,6 +1,6 @@
-import * as admin from "firebase-admin";
-import { functionsOauthClient } from "./o-auth-client";
-import { oAuthTokens } from "./o-auth-tokens";
+import * as admin from 'firebase-admin';
+import {functionsOauthClient} from './o-auth-client';
+import {oAuthTokens} from './o-auth-tokens';
 
 export async function getAuthorizedClient() {
   if (oAuthTokens.data) {
@@ -9,8 +9,8 @@ export async function getAuthorizedClient() {
 
   const snapshot = await admin
     .firestore()
-    .collection("settings")
-    .doc("tokens")
+    .collection('settings')
+    .doc('tokens')
     .get();
 
   oAuthTokens.data = snapshot.data();
