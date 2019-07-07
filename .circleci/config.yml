@@ -7,6 +7,7 @@ jobs:
     environment:
       NPM_VERSION: "6.9.0"
     steps:
+      - checkout
       - run:
           name: Set Private Environment
           command: firebase functions:config:set sendgrid.token=$SENDGRID_TOKEN email.from=$EMAIL_FROM googleapi.client_id=$GOOGLE_CLIENT_ID googleapi.client_secret=$GOOGLE_CLIENT_SECRET googleapi.sheet_id=$GOOGLE_SHEET_ID --project=jaspero-sheets --token $FIREBASE_CI_TOKEN
