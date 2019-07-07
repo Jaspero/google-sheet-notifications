@@ -1,6 +1,7 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/project
     docker:
       - image: flauc/firebase
     environment:
@@ -48,6 +49,7 @@ jobs:
             - firestore.rules
             - .firebaserc
   deploy:
+    working_directory: ~/project
     docker:
       - image: flauc/firebase
     steps:
