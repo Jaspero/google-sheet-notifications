@@ -1,8 +1,8 @@
-import * as sgMail from "@sendgrid/mail";
-import { readFile } from "fs";
-import { compile } from "handlebars";
-import { promisify } from "util";
-import { ENV_CONFIG } from "../consts/env-config.const";
+import * as sgMail from '@sendgrid/mail';
+import {readFile} from 'fs';
+import {compile} from 'handlebars';
+import {promisify} from 'util';
+import {ENV_CONFIG} from '../consts/env-config.const';
 
 export async function sendEmail(
   to: string,
@@ -21,7 +21,7 @@ export async function sendEmail(
     to,
     from: ENV_CONFIG.email.from,
     subject,
-    text: "Please use an HTML enabled client to view this email.",
+    text: 'Please use an HTML enabled client to view this email.',
     html
   });
 
