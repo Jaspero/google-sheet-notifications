@@ -36,10 +36,11 @@ export const sendNotifications = functions.https.onRequest(
           // @ts-ignore
           if (nextChargeDayFormat - Date.now() <= miliSecWeek) {
             sendEmail('sven.djanis@gmail.com', 'Reminder', 'notification', {
-              project: item['Client'],
+              project: item['Project'],
               charge:
                 Number(item['Monthly Charge']) * Number(item['Month Period']),
-              currency: item['CURRENCY']
+              currency: item['CURRENCY'],
+              client: item['Client']
             })
               .then(() => {
                 console.log('success');
