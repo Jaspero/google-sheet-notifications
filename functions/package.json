@@ -21,7 +21,7 @@
     "firebase-functions": "3.0.2",
     "google-auth-library": "4.2.5",
     "googleapis": "40.0.1",
-    "handlebars": "4.3.0"
+    "handlebars": "4.7.7"
   },
   "devDependencies": {
     "@types/express": "4.17.0",
