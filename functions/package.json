@@ -16,7 +16,7 @@
   "main": "lib/index.js",
   "dependencies": {
     "@sendgrid/mail": "6.4.0",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "firebase-admin": "8.2.0",
     "firebase-functions": "3.0.2",
     "google-auth-library": "4.2.5",
